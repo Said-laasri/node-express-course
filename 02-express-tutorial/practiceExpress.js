@@ -1,9 +1,10 @@
 const express = require("express");
 
 const app = express();
+const consoleLog = require('./practice-middleware');
 
 app.use(express.static("./new-public"))
-
+app.use(consoleLog)
 app.get('/sample', (req, res) => {
     res.send('<h2>This is working.</h2>')
 })
