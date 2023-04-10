@@ -1,0 +1,8 @@
+1- In an Express application, middleware functions are used to perform various tasks such as parsing incoming requests, handling errors, and providing authentication and authorization checks.
+
+
+2- CRUD stands for Create, Read, Update, and Delete, which are the four basic operations that can be performed on data in a persistent storage system, such as database.
+
+
+3-1 -  To get your app to access the information in the .env file, you need to use a package called dotenv. The dotenv package allows you to load environment variables from a .env file into your Node.js application.
+3-2 -  To protect the contents of the .env file so that it is not stored in GitHub repository, you should add ".env" to your .gitignore file.
