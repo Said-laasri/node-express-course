@@ -1,0 +1,13 @@
+1- The main purpose of asyncWrapper is to wrap an asynchronous function that returns a Promise, and handle any errors that might occur during its execution. This function takes a callback function as an argument, which is an asynchronous function that returns a Promise. The asyncWrapper then returns a new function that is also asynchronous, and handles any errors that might occur during the execution of the original function.
+
+
+2-const getTask = asyncWrapper(async (req, res, next) => {
+  const { id: taskID } = req.params;
+  const task = await Task.findOne({ _id: taskID });
+  if (!task) {
+     return next(creatCustomError(`No task found! with id: ${taskID}`, 404));
+     //const error = new CustomAPIError(`Task with ID ${taskID} not found`, 404);
+     //return next(error);
+  }
+  res.status(200).json({ task });
+});
